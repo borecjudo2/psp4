@@ -1,7 +1,6 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <%@ include file="common/header.jspf"%>
 <%@ include file="common/navigation.jspf"%>
-
-
 
 <div class="container">
     <div>
@@ -32,7 +31,6 @@
                         <td>${phone.model}</td>
                         <td>${phone.soldCost}</td>
                         <td>${phone.soldDate}</td>
-<%--                        <td><fmt:formatDate value="${phone.soldDate}" pattern="dd/MM/yyyy"/></td>--%>
                         <td><a type="button" class="btn btn-success"
                                href="/update?id=${phone.id}">Update</a>
                             <a type="button" class="btn btn-warning"
@@ -45,12 +43,15 @@
     </div>
 
 </div>
-<%@ include file="common/footer.jspf"%>
 
 <script>
     $('th').on('click', function (){
         var column = $(this).data('column')
         var order = $(this).data('order')
         console.log('Column clicked', column, order)
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/sort?column=' + column +'&order=' + order, true);
+        xhr.send()
     })
 </script>
