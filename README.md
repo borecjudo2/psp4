@@ -1,19 +1,9 @@
-## Micronaut and Auth0
+## ПСП задача 4
 
-### Auth0
+Разработать приложение на основе JSP/Servlets с базой данных по учету информации о продаже мобильных телефонов
 
-- [Login in Auth0 and create new application](https://auth0.com)
+![img.png](img.png)
 
-### Settings your auth0 app
+![img_1.png](img_1.png)
 
-- Allowed Callback URLs -> http://YOUR_HOST:YOUR_PORT/oauth/callback/auth0 -> Example: http://localhost:8080/oauth/callback/auth0
-- Allowed Logout URLs -> http://YOUR_HOST:YOUR_PORT/logout -> Example: http://localhost:8080/logout
-
-### application.yml
-
-- Init application.yml (OAUTH_CLIENT_ID, OAUTH_CLIENT_SECRET, OAUTH_CLIENT_DOMAIN)
-
----
-
-### Link
-- [SECURE A MICRONAUT APP WITH OKTA BY MICRONAUT](https://guides.micronaut.io/latest/micronaut-oauth2-okta-maven-java.html)
+![img_2.png](img_2.png)
